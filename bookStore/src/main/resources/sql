@@ -1,0 +1,15 @@
+insert into t_role(role_name,create_date,note)
+values('管理员',now(),'系统维护，数据更新');
+drop table if exists t_user;
+CREATE TABLE if not exists t_user(
+  id INT(11) PRIMARY KEY AUTO_INCREMENT,
+  user_name VARCHAR(60),
+  birthday date,
+  sex TINYINT(4),  -- 0男生，1女生
+  mobile varchar(20), 
+  email varchar(60),
+  note VARCHAR(100)  
+)ENGINE=INNODB DEFAULT CHARSET=utf8;
+insert into t_user(user_name,birthday,sex,mobile,email,note)
+values('张军',DATE_FORMAT('2008-10-10','YYYY-MM-NN'),0,'13745678858','123@qq.com','数学科代表'),
+('李丽',DATE_FORMAT('2008-10-10','YYYY-MM-NN'),1,'19845678858','123@qq.com','语言科代表');
