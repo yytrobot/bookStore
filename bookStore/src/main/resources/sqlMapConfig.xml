@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" 
+    "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+	<!--<propertyies/> 属性 -->
+	<settings>    
+		<setting name="cacheEnabled"  value="true" />		
+		<setting name="useGeneratedKeys"  value="true" />		
+	</settings>
+    <typeAliases> <!-- 定义类型别名 -->
+        <typeAlias alias="role"  type="com.yyk.pojo.Role" />
+        <typeAlias alias="user"  type="com.yyk.pojo.Role" />
+    </typeAliases>
+    <!--  <typeHandlers>    	
+    	<typeHandler handler="com.association.enums.SexEnumTypeHandler"
+    	javaType="com.association.enums.SexEnum"/>
+    </typeHandlers>-->
+    <!-- <objectFactory/>对象工厂 -->
+    <!-- <plugins/>插件 -->     
+    
+     <!-- <databaseIdProvider/>数据库厂商标识 -->        
+        <mappers><!-- 定义映射器 -->        	
+        	<mapper resource="com\yyk\dao\role.xml " />
+        	<mapper resource="com\yyk\dao\user.xml " />      	
+        </mappers> 
+</configuration>
